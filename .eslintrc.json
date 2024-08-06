@@ -1,3 +1,27 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "react/jsx-uses-react": "warn",
+    "react/jsx-uses-vars": "warn",
+    "no-unused-vars": "warn",
+    "no-useless-computed-key": "warn",
+    "no-var": "warn",
+    "object-shorthand": "warn",
+    "no-else-return": "warn",
+    "strict": "warn",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^import\\s+type\\s.*$"],
+          ["^react", "^next"],
+          ["^\\u0000"],
+          ["^"],
+          ["^@/components", "^@/context", "^@/utils", "^@"],
+          ["\\.css$", "\\.scss$"]
+        ]
+      }
+    ]
+  }
 }

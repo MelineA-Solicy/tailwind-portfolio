@@ -2,32 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.theme-light {
+  --primaryColor: #201e1e;
+  --bgColor: #f0f0f0;
+  --leftSideBorder: #d4d3d5;
+
+  --textEditorColor: #424242;
+  --textEditorHoverColor: #fff;
+  --textEditorHoverBg: #007cd2;
+
+  --headerBorderColor: #d4d3d5;
+
+  --tabBarBgColor: #e4e5e5;
+  --tabBarBorderColor: #d4d3d5;
+  --tabBarActiveBorderColor: #007cd2;
+  --tabBarActiveTextColor: #fff;
+  --tabBarActiveBgColor: #007cd2;
+
+  --themePrimaryColor: #007cd2;
+  --themeButtonPrimaryColor: #0076cb;
+  --themeButtonSecondaryColor: #033151c5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+.theme-dark {
+  --primaryColor: #ffffff;
+  --bgColor: #0c2235;
+  --leftSideBorder: #143d4f;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  --textEditorColor: #c4dbf2;
+  --textEditorHoverColor: #4a83a0;
+  --textEditorHoverBg: #0e293f;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  --headerBorderColor: #625c5c;
+
+  --tabBarBgColor: #020e1b;
+  --tabBarBorderColor: #625c5c;
+  --tabBarActiveBorderColor: #369fd5;
+  --tabBarActiveTextColor: #ffffff;
+  --tabBarActiveBgColor: #153855;
+
+  --themePrimaryColor: #369fd5;
+  --themeButtonPrimaryColor: #1e648a;
+  --themeButtonSecondaryColor: #3a3c41;
 }
